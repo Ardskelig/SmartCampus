@@ -10,7 +10,7 @@ import { RouterLink, RouterView } from 'vue-router'
   input-align="center"
 />
 <van-row>
-  <van-col span="12">span: 12</van-col>
+  <van-col span="12">666</van-col>
   <van-col span="12">span: 12</van-col>
 </van-row>
 </template>
