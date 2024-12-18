@@ -1,14 +1,6 @@
 # SmartCampus
 
-This template should help get you started developing with Vue 3 in Vite.
-
-## Recommended IDE Setup
-
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vite.dev/config/).
+融合did以及智慧校园的前台项目，使用vue+vant+vite构建
 
 ## Project Setup
 
