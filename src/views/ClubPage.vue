@@ -1,5 +1,5 @@
 <template>
-    <van-nav-bar left-text="返回" title="校园开放日" ></van-nav-bar>
+    <van-nav-bar left-text="返回" title="校园开放日" @click-left="onClickLeft"></van-nav-bar>
     <div class="community-page">
       <!-- 社团卡片 -->
       <div class="community-card" v-for="item in communities" :key="item.id">
@@ -26,7 +26,9 @@
   
   <script setup>
   import { reactive } from "vue";
-  
+  import { useRoute,useRouter } from 'vue-router';
+const router=useRouter()
+const onClickLeft = () => history.back();
   // 模拟数据
   const communities = reactive([
     {

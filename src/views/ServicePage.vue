@@ -1,12 +1,12 @@
 <template>
-    <van-nav-bar left-text="返回" title="校园服务" ></van-nav-bar>
+    <van-nav-bar title="校园服务" ></van-nav-bar>
     <div class="container">
     <!-- 新添加活动 -->
       <section>
-        <h2 class="section-title">校务办公</h2>
+        <h2 class="section-title">校园活动</h2>
         <div class="grid">
           <div class="grid-item" v-for="item in activities" :key="item.title">
-            <div class="icon" :style="{ backgroundColor: item.bgColor }">
+            <div class="icon" :style="{ backgroundColor: item.bgColor }" @click="router.push('/club')">
               <span>{{ item.icon }}</span>
             </div>
             <p>{{ item.title }}</p>
@@ -69,6 +69,8 @@
   
   <script setup>
   import { reactive } from "vue";
+  import { useRoute,useRouter } from 'vue-router';
+const router=useRouter()
   
   const activities = reactive([
     { title: "校园开放日", icon: "⭐", bgColor: "#4baef5" },

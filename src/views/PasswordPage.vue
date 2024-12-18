@@ -1,7 +1,7 @@
 <template>
     <div class="password-page">
       <!-- 标题 -->
-      <h1 class="title">密码</h1>
+      <van-nav-bar title="密码管理" ></van-nav-bar>
   
       <!-- 搜索框 -->
       <div class="search-bar">
