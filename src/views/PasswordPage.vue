@@ -1,9 +1,9 @@
 <template>
+<van-nav-bar title="did管理" ></van-nav-bar>
     <div class="password-page">
       <!-- 标题 -->
-      <van-nav-bar title="密码管理" ></van-nav-bar>
+      
 
-      <!-- 搜索框 -->
       <div class="search-bar">
         <input type="text" placeholder="搜索" />
         <i class="search-icon">🔍</i>
@@ -11,7 +11,7 @@
 
       <!-- 功能网格 -->
       <div class="grid">
-        <div class="grid-item">
+        <div class="grid-item" @click="viewDetail">
           <i class="icon blue">🔑</i>
           <span>DID管理</span>
           <span class="count">60</span>
@@ -57,12 +57,41 @@
         <a href="#" class="start-btn">开始使用</a>
       </div>
     </div>
+    <van-dialog v-model:show="show" title="did详情" show-cancel-button width="400px">
+      <van-divider
+        :style="{ borderColor: 'black' }"
+      >
+      </van-divider>
+
+      <van-cell title="did2LAtKkHkYsT4ontgoWzNNGVauRP"size="large" />
+      <div style="height: 250px;width: 250px; margin: 0 auto;">
+      <van-image
+        fit="cover"
+        position="right"
+        src="http://yanzushengkai.oss-cn-beijing.aliyuncs.com/qrcode.png"
+      />
+    </div>
+    <van-divider
+        :style="{ borderColor: 'black' }"
+      >
+      </van-divider>
+    </van-dialog>
   </template>
 
   <script setup>
+  import { showDialog } from 'vant';
+  import {ref} from 'vue'
+  const did=ref('did:2LAtKkHkYsT4ontgoWzNNGVauRP1')
+  const createdTime=ref('2024/12/1')
+  const show=ref(false)
+  const viewDetail=()=>{
+    show.value=true
+  }
+  
   </script>
 
-  <style scoped>
+<style scoped>
+
   /* 基础布局样式 */
   .password-page {
     background-color: #f5f5f5; /* 修改为浅灰色背景 */
@@ -208,4 +237,4 @@
     text-decoration: none;
     font-size: 16px;
   }
-  </style>
+</style>
